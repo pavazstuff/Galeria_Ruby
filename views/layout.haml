@@ -1,0 +1,28 @@
+!!!
+%html
+	%head
+		%title Galeria
+		%meta{:charset => 'utf-8'}
+		%meta{:name => 'viewport', :content => 'width=device-width,initial-scale=1,user-scalable=no'}
+		%meta{:name => 'keywords', :content => 'galeria, imagenes, lightbox, fotos, collage'}
+		%meta{:name => 'description', :content => 'Es un sitio en el cual se pueden subir imagenes'}
+		%meta{:name => 'author', :content => 'Paris Emmanuel Vazquez Venzor'}
+		%link{:href => 'css/main.css', :rel => 'stylesheet', :type => 'text/css'}
+		%link{:href => 'https://fonts.googleapis.com/css?family=Mogra', :rel => 'stylesheet', :type => 'text/css'}
+		
+	%body{:id => 'sky'}
+		%form{:method => 'post', :enctype => 'multipart/form-data'}
+			.header
+				.title
+					%h1 Galeria de imagenes
+				.upload
+					%input{:type => 'file', :name => 'file'}
+				.send
+					%input{:type => 'submit', :value => 'Subir', :class => 'btn'}
+
+		.container= yield
+
+		.top
+			%a{:href => '#sky'} Ir hasta arriba
+		.footer
+			&copy; Paris Enterprise 2017.

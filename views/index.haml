@@ -1,0 +1,7 @@
+
+.container	
+	.images
+		- @images.each do |image|
+			%a{:href => "img/#{image}", :rel => 'lightbox'}
+				%img{:src => "img/#{image}", :alt => "#{image}", :title => "#{image}", :class => 'image'}
+
